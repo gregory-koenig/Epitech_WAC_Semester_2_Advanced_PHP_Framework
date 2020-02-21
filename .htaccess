@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /projects/dev/Webacademie/Semestre_2/PHP_avance/PiePHP
+RewriteCond %{REQUEST_FILENAME} !-f [OR]
+RewriteCond %{REQUEST_URI} !^/projects/dev/Webacademie/Semestre_2/PHP_avance/PiePHP(webroot/.+|index\.php|robots\.txt)$
+RewriteRule ^(.*) index.php?url=$1 [QSA,L]
